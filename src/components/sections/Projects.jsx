@@ -227,7 +227,57 @@ Technical Stack: .
                   View Project →
                 </a>
               </div>
-            </div>  
+            </div> 
+            <div
+              className="
+              glass p-6 rounded-xl border border-white/10 
+              hover:-translate-y-1 hover:border-blue-500/30
+              hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)]
+              transition-all
+            "
+            >
+              <h3 className="text-xl font-bold mb-2">React Advanced – Productivity Suite (Todo List)</h3>
+              <p className="text-gray-400 mb-4">
+                
+High-end productivity application featuring advanced local data persistence.<br/><br/>
+Developed a comprehensive task management system focused on delivering a seamless User Experience (UX) and high-performance data handling. This project demonstrates the ability to build production-ready frontend architectures.<br/><br/>
+
+Advanced State Management: Leveraged React Hooks and SWR for efficient data fetching, caching, and state synchronization.<br/><br/>
+
+Local Data Persistence: Integrated Dexie.js (IndexedDB) to provide robust, permanent local storage, enabling full offline functionality and superior performance compared to standard localStorage.<br/><br/>
+
+Premium UI/UX: Built a sophisticated design system using Material UI (MUI), featuring dynamic icon sets, custom theming, and interactive components such as modals and popups.<br/><br/>
+
+Scalable Architecture: Implemented a modular directory structure to ensure code reusability and ease of maintenance as the application grows.
+
+
+
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {[ "React (Advanced Hooks, SWR)", "Material UI (MUI)", " JavaScript ES6+", "Vite"].map((tech, key) => (
+                  <span
+                    key={key}
+                    className="
+                      bg-blue-500/10 text-blue-500 py-1 px-3 
+                      rounded-full text-sm
+                      transition
+                      hover:bg-blue-500/20 hover:-translate-y-0.5
+                      hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]
+                    "
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div className="flex justify-between items-center ">
+                <a target="_blank"
+                  href="https://dhia9.github.io/amelioration-to-do-list/"
+                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
+                >
+                  View Project →
+                </a>
+              </div>
+            </div> 
           </div>
         </div>
       </RevealOnScroll>
