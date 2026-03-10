@@ -9,13 +9,16 @@ export const Home = () => {
       <RevealOnScroll>
         <div className="text-center z-10 px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-right">
-            Hi, I'm Pedro Tech
+            Hi, I'm Dhia Somai
           </h1>
 
           <p className="tex-gray-400 text-lg mb-8 max-w-lg mx-auto">
-            I’m a full-stack developer who loves crafting clean, scalable web
-            applications. My goal is to build solutions that offer both
-            exceptional performance and a delightful user experience.
+            I am a second-year student at INSA Lyon, ranked among the top 10 engineering schools in France and the #1 post-baccalaureate institution.<br/> I am also a laureate of the 'Thales STEM for All' award, a highly competitive distinction.
+            <br/>
+            As a Full-Stack Developer, I am passionate about crafting clean, scalable web applications. My goal is to build meaningful solutions that deliver both exceptional performance and a seamless user experience.
+
+            I am currently seeking a three-year apprenticeship in a Full-Stack role starting next year.
+            I'm open for opportunities in Data Science or Data Engineering
           </p>
           <div className="flex justify-center space-x-4">
             <a

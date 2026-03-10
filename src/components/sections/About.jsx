@@ -3,13 +3,14 @@ import { RevealOnScroll } from "../RevealOnScroll";
 export const About = () => {
   const frontendSkills = [
     "React",
-    "Vue",
-    "TypeScript",
+    "Bootstrap",
     "TailwindCSS",
-    "Svelte",
+    "HTML",
+    "CSS",
+    "ejs (Embedded js)"
   ];
 
-  const backendSkills = ["Node.js", "Python", "AWS", "MongoDB", "GraphQL"];
+  const backendSkills = ["Node.js", "Python", "Express", "MongoDB", "PostgreSQL","API REST"];
 
   return (
     <section
@@ -26,7 +27,7 @@ export const About = () => {
           <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
             <p className="text-gray-300 mb-6">
               Passionate developer with expertise in building scalable web
-              applications and creating innovative solutions.
+              applications and creating meaningful innovative solutions.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -69,13 +70,20 @@ export const About = () => {
               <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li>
-                  <strong> B.S. in Computer Science </strong> - XYZ University
+                  <strong> Integrated Preparatory Cycle (second year)</strong> - INSA LYON
                   (2016-2020)
                 </li>
                 <li>
-                  Relevant Coursework: Data Structures, Web Development, Cloud
-                  Computing...
+                  Relevant Coursework: Data Structures, Web Development , GUI
+                  OOP ,Statistics , Machine learning
+                  <br />
+                  - first year obtained with high honors
                 </li>
+                <li>French General Baccalaureate – Mathematics & Physics Specialization
+                  <br />- Self-taught candidate Graduated with High Honors (Mention Très Bien) – 17.70/20 <br />- Key Achievement: Achieved a perfect score of 20/20 in Mathematics, Physics, and Philosophy.</li>
+                <li> Baccalaureate – Mathematics Specialization
+                  Lycée Pilote Ariana
+                  <br />- Result: Graduated with Highest Honors (Félicitations du Jury) – 18.72/20<br />- Context: Attended a selective "Lycée Pilote", with admission granted only through a highly competitive national entrance exam.</li>
               </ul>
             </div>
             <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
@@ -84,15 +92,16 @@ export const About = () => {
                 <div>
                   <h4 className="font-semibold">
                     {" "}
-                    Software Engineer at ABC Corp (2020 - Present){" "}
+                    Warehouse Logistics & Management Intern | Magasin Général{" "}
                   </h4>
                   <p>
-                    Developed and maintained microservices for cloud-based
-                    applications.
+                    Introductory Corporate Internship: Gained hands-on experience in supply chain operations and large-scale inventory management.<br/>
+
+                    Observed and assisted in daily logistics workflows, warehouse organization, and stock control systems.
                   </p>
                 </div>
 
-                <div>
+                {/* <div>
                   <h4 className="font-semibold">
                     {" "}
                     Intern at DEF Startups (2019){" "}
@@ -101,7 +110,7 @@ export const About = () => {
                     Assisted in building front-end components and integration
                     REST APIs
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
