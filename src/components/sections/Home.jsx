@@ -1,4 +1,6 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+// import monCv from '../../assets/Dhia-Somai_cv_.pdf';
+import monCv from "../../assets/Dhia-Somai_cv_.pdf";
 
 export const Home = () => {
   return (
@@ -13,12 +15,12 @@ export const Home = () => {
           </h1>
 
           <p className="tex-gray-400 text-lg mb-8 max-w-lg mx-auto">
-            I am a second-year student at INSA Lyon, ranked among the top 10 engineering schools in France and the #1 post-baccalaureate institution.<br/> I am also a laureate of the 'Thales STEM for All' award, a highly competitive distinction.
-            <br/>
-            As a Full-Stack Developer, I am passionate about crafting clean, scalable web applications. My goal is to build meaningful solutions that deliver both exceptional performance and a seamless user experience.
+            Full-Stack Developer | INSA Lyon | Thales STEM for All Laureate
+            <br />
 
-            I am currently seeking a three-year apprenticeship in a Full-Stack role starting next year.
-            I'm open for opportunities in Data Science or Data Engineering
+
+            Second-year engineering student at France’s top-ranked post-bac school , seeking a 3-year apprenticeship starting next year.<br /> Passionate about Full-Stack development, with a strong interest in Data Science and Data Engineering roles.
+
           </p>
           <div className="flex justify-center space-x-4">
             <a
@@ -35,8 +37,29 @@ export const Home = () => {
             >
               Contact Me
             </a>
+            {/* // En haut de votre fichier React/Vue
+
+
+// Dans votre JSX
+<a href={monCv} download="CV_Dhia_Somai.pdf" ...> */}
+            <a
+              href={monCv}
+              download="CV_Dhia_Somai.pdf"
+              className="border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all duration-200 
+             hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10"
+            >
+              download cv
+            </a>
+            
+
           </div>
-        </div>
+          <br />
+          <div className="flex justify-center space-x-4">
+            <a target="_blank" href="https://www.linkedin.com/in/dhia-somai-/"  className="border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all duration-200 
+             hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10">linkedin</a>
+            <a target="_blank" href="https://github.com/dhia9" className="border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all duration-200 
+             hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10">github</a>
+        </div></div>
       </RevealOnScroll>
     </section>
   );
