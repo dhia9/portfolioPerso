@@ -7,10 +7,11 @@ export const About = () => {
     "TailwindCSS",
     "HTML",
     "CSS",
-    "ejs (Embedded js)"
+    "ejs (Embedded js)",
+    "Material UI"
   ];
 
-  const backendSkills = ["Node.js", "Python", "Express", "MongoDB", "PostgreSQL","API REST"];
+  const backendSkills = ["Node.js", "Python", "Express", "MongoDB", "PostgreSQL","API REST","SQL","MVC","Typescript","javascript(ES6)"];
 
   return (
     <section
@@ -71,7 +72,7 @@ export const About = () => {
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li>
                   <strong> Integrated Preparatory Cycle (second year)</strong> - INSA LYON
-                  (2016-2020)
+                  
                 </li>
                 <li>
                   Relevant Coursework: Data Structures, Web Development , GUI
@@ -82,7 +83,7 @@ export const About = () => {
                 <li>French General Baccalaureate – Mathematics & Physics Specialization
                   <br />- Self-taught candidate Graduated with High Honors<br /></li>
                 <li> Baccalaureate – Mathematics Specialization
-                  Lycée Pilote Ariana
+                  Lycée Pilote 
                   <br />- Result: Graduated with Highest Honors<br />- Context: Attended a selective "Lycée Pilote", with admission granted only through a highly competitive national entrance exam.</li>
               </ul>
             </div>
@@ -92,7 +93,7 @@ export const About = () => {
                 <div>
                   <h4 className="font-semibold">
                     {" "}
-                    Warehouse Logistics & Management Intern | Magasin Général{" "}
+                    Warehouse Logistics & Management Intern | SMG{" "}
                   </h4>
                   <p>
                     Introductory Corporate Internship: Gained hands-on experience in supply chain operations and large-scale inventory management.<br/>
