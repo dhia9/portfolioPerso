@@ -80,10 +80,10 @@ export const About = () => {
                   - first year obtained with high honors
                 </li>
                 <li>French General Baccalaureate – Mathematics & Physics Specialization
-                  <br />- Self-taught candidate Graduated with High Honors (Mention Très Bien) – 17.70/20 <br />- Key Achievement: Achieved a perfect score of 20/20 in Mathematics, Physics, and Philosophy.</li>
+                  <br />- Self-taught candidate Graduated with High Honors<br /></li>
                 <li> Baccalaureate – Mathematics Specialization
                   Lycée Pilote Ariana
-                  <br />- Result: Graduated with Highest Honors (Félicitations du Jury) – 18.72/20<br />- Context: Attended a selective "Lycée Pilote", with admission granted only through a highly competitive national entrance exam.</li>
+                  <br />- Result: Graduated with Highest Honors<br />- Context: Attended a selective "Lycée Pilote", with admission granted only through a highly competitive national entrance exam.</li>
               </ul>
             </div>
             <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
