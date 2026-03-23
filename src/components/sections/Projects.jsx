@@ -1,21 +1,38 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 
-export const Projects = () => {
+export const Projects = ({ lang }) => {
+  const t = {
+    en: {
+      title: "Featured Projects",
+      spot: "SpotStories",
+      productivity: "Productivity App – Task Manager",
+      todo: "Practical To do list app",
+      dice: "Dice game",
+      tictactoe: "TicTacToe",
+      algo: "Algorithmic Optimization – Python (Upgrade-Shapley)",
+      view: "View Project →",
+    },
+    fr: {
+      title: "Projets Mis en Avant",
+      spot: "SpotStories",
+      productivity: "Application Productivité – Gestionnaire de Tâches",
+      todo: "Application de liste de tâches",
+      dice: "Jeu de dés",
+      tictactoe: "TicTacToe",
+      algo: "Optimisation Algorithmique – Python (Upgrade-Shapley)",
+      view: "Voir le projet →",
+    },
+  };
+
   return (
-    <section
-      id="projects"
-      className="min-h-screen flex items-center justify-center py-20"
-    >
+    <section id="projects" className="section-root flex items-center justify-center">
       <RevealOnScroll>
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-            {" "}
-            Featured Projects
-          </h2>
+        <div className="section-inner">
+          <h2 className="section-heading text-center mb-10">{t[lang].title}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-              <h3 className="text-xl font-bold mb-2">SpotStories</h3> 
-              <p className="text-gray-400 mb-4">
+            <div className="card glass-panel hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-[0_10px_30px_rgba(56,189,248,0.27)] transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2">{t[lang].spot}</h3>
+              <p className="text-muted mb-4">
                 
                 Full-Stack/Backend Focus: Architecture: MVC design pattern for clean, maintainable server-side logic.<br /><br />
 
@@ -30,9 +47,7 @@ Security: Implementation of secure Auth systems and Role-Based Access Control (R
 "API REST",  "MVC architecture", "authentification" , "EJS", "Bootstrap","Passport.js"].map((tech, key) => (
                   <span
                     key={key}
-                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
-                                    hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all
-                    "
+                    className="badge"
                   >
                     {tech}
                   </span>
@@ -44,20 +59,15 @@ Security: Implementation of secure Auth systems and Role-Based Access Control (R
                   href="https://spotstories.vercel.app/"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
-                  View Project →
+                  {t[lang].view}
                 </a>
               </div>
             </div>
             <div
-              className="
-              glass p-6 rounded-xl border border-white/10 
-              hover:-translate-y-1 hover:border-blue-500/30
-              hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)]
-              transition-all
-            "
+              className="card glass-panel hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-[0_10px_30px_rgba(56,189,248,0.27)] transition-all duration-300"
             >
-              <h3 className="text-xl font-bold mb-2">Productivity App – Task Manager</h3>
-              <p className="text-gray-400 mb-4">
+              <h3 className="text-xl font-bold mb-2">{t[lang].productivity}</h3>
+              <p className="text-muted mb-4">
                 
 Production-ready task management system with offline-first architecture. <br /><br />
 
@@ -72,13 +82,7 @@ Premium UI/UX Architecture: Engineered a sophisticated design system using Mater
                 {[ "React (Advanced Hooks, SWR)", "Material UI (MUI)", " JavaScript ES6+", "Vite"].map((tech, key) => (
                   <span
                     key={key}
-                    className="
-                      bg-blue-500/10 text-blue-500 py-1 px-3 
-                      rounded-full text-sm
-                      transition
-                      hover:bg-blue-500/20 hover:-translate-y-0.5
-                      hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]
-                    "
+                    className="badge"
                   >
                     {tech}
                   </span>
@@ -89,20 +93,15 @@ Premium UI/UX Architecture: Engineered a sophisticated design system using Mater
                   href="https://dhia9.github.io/amelioration-to-do-list/"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
-                  View Project →
+                  {t[lang].view}
                 </a>
               </div>
             </div> 
             <div
-              className="
-              glass p-6 rounded-xl border border-white/10 
-              hover:-translate-y-1 hover:border-blue-500/30
-              hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)]
-              transition-all
-            "
+              className="card glass-panel hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-[0_10px_30px_rgba(56,189,248,0.27)] transition-all duration-300"
             >
-              <h3 className="text-xl font-bold mb-2">Practical To do list app</h3>
-              <p className="text-gray-400 mb-4">
+              <h3 className="text-xl font-bold mb-2">{t[lang].todo}</h3>
+              <p className="text-muted mb-4">
 
 Dynamic CRUD application with local data persistence. <br />   <br />
 
@@ -116,13 +115,7 @@ Data Persistence: Integrated the Web Storage API (localStorage) to ensure user d
 "JavaScript ES6+", "localStorage", "HTML", "CSS","Material UI"].map((tech, key) => (
                   <span
                     key={key}
-                    className="
-                      bg-blue-500/10 text-blue-500 py-1 px-3 
-                      rounded-full text-sm
-                      transition
-                      hover:bg-blue-500/20 hover:-translate-y-0.5
-                      hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]
-                    "
+                    className="badge"
                   >
                     {tech}
                   </span>
@@ -133,21 +126,16 @@ Data Persistence: Integrated the Web Storage API (localStorage) to ensure user d
                   href="https://dhia9.github.io/todolist/"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
-                  View Project →
+                  {t[lang].view}
                 </a>
               </div>
             </div>
 
             <div
-              className="
-              glass p-6 rounded-xl border border-white/10 
-              hover:-translate-y-1 hover:border-blue-500/30
-              hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)]
-              transition-all
-            "
+              className="card glass-panel hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-[0_10px_30px_rgba(56,189,248,0.27)] transition-all duration-300"
             >
-              <h3 className="text-xl font-bold mb-2">Dice game</h3>
-              <p className="text-gray-400 mb-4">
+              <h3 className="text-xl font-bold mb-2">{t[lang].dice}</h3>
+              <p className="text-muted mb-4">
                 Dynamic task management application with optimized state logic. <br /><br />
 
 State-Driven Interface: Developed a reactive UI using React Hooks (useState, useEffect) to ensure seamless real-time updates and efficient state management.<br /><br />
@@ -159,13 +147,7 @@ Component-Based Architecture: Engineered a modular codebase using reusable funct
                   (tech) => (
                     <span
                       key={tech}
-                      className="
-                      bg-blue-500/10 text-blue-500 py-1 px-3 
-                      rounded-full text-sm
-                      transition
-                      hover:bg-blue-500/20 hover:-translate-y-0.5
-                      hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]
-                    "
+                      className="badge"
                     >
                       {tech}
                     </span>
@@ -177,21 +159,16 @@ Component-Based Architecture: Engineered a modular codebase using reusable funct
                   href="https://dhia9.github.io/Die-game/"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
-                  View Project →
+                  {t[lang].view}
                 </a>
               </div>
             </div>
 
             <div
-              className="
-              glass p-6 rounded-xl border border-white/10 
-              hover:-translate-y-1 hover:border-blue-500/30
-              hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)]
-              transition-all
-            "
+              className="card glass-panel hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-[0_10px_30px_rgba(56,189,248,0.27)] transition-all duration-300"
             >
-              <h3 className="text-xl font-bold mb-2">TicTacToe</h3>
-              <p className="text-gray-400 mb-4">
+              <h3 className="text-xl font-bold mb-2">{t[lang].tictactoe}</h3>
+              <p className="text-muted mb-4">
                 Interactive game engine built with efficient state management and logic.br <br /><br />
 
 Algorithmic Logic: Engineered a custom win-condition evaluator and grid-system algorithm to handle real-time game states and draw scenarios.<br /><br />
@@ -204,13 +181,7 @@ Event-Driven Architecture: Leveraged ES6+ JavaScript to build a modular system, 
                 {["JavaScript (ES6+)"," DOM API"," Event Handling", "CSS"].map((tech, key) => (
                   <span
                     key={key}
-                    className="
-                      bg-blue-500/10 text-blue-500 py-1 px-3 
-                      rounded-full text-sm
-                      transition
-                      hover:bg-blue-500/20 hover:-translate-y-0.5
-                      hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]
-                    "
+                    className="badge"
                   >
                     {tech}
                   </span>
@@ -221,21 +192,16 @@ Event-Driven Architecture: Leveraged ES6+ JavaScript to build a modular system, 
                   href="https://dhia9.github.io/tictactoe/"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
-                  View Project →
+                  {t[lang].view}
                 </a>
               </div>
             </div>
             
             <div
-              className="
-              glass p-6 rounded-xl border border-white/10 
-              hover:-translate-y-1 hover:border-blue-500/30
-              hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)]
-              transition-all
-            "
+              className="card glass-panel hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-[0_10px_30px_rgba(56,189,248,0.27)] transition-all duration-300"
             >
-              <h3 className="text-xl font-bold mb-2">Algorithmic Optimization – Python (Upgrade-Shapley)</h3>
-              <p className="text-gray-400 mb-4">
+              <h3 className="text-xl font-bold mb-2">{t[lang].algo}</h3>
+              <p className="text-muted mb-4">
                 
 High-performance implementation of Cooperative Game Theory for resource allocation. <br /><br />
 
@@ -248,13 +214,7 @@ Game Theory & Robustness: Engineered an optimized Shapley Value algorithm for fa
                   (tech) => (
                     <span
                       key={tech}
-                      className="
-                      bg-blue-500/10 text-blue-500 py-1 px-3 
-                      rounded-full text-sm
-                      transition
-                      hover:bg-blue-500/20 hover:-translate-y-0.5
-                      hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]
-                    "
+                      className="badge"
                     >
                       {tech}
                     </span>
@@ -266,7 +226,7 @@ Game Theory & Robustness: Engineered an optimized Shapley Value algorithm for fa
                   href="https://github.com/dhia9/Upgrade-Shapeley"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
-                  View Project →
+                  {t[lang].view}
                 </a>
               </div>
             </div> 

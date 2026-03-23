@@ -2,7 +2,28 @@ import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
 
-export const Contact = () => {
+export const Contact = ({ lang }) => {
+  const t = {
+    en: {
+      heading: "Get In Touch",
+      name: "Name...",
+      email: "example@gmail.com",
+      message: "Your Message...",
+      submit: "Send Message",
+      sent: "Message Sent!",
+      error: "Oops! Something went wrong. Please try again.",
+    },
+    fr: {
+      heading: "Entrer en contact",
+      name: "Nom...",
+      email: "exemple@gmail.com",
+      message: "Votre message...",
+      submit: "Envoyer le message",
+      sent: "Message envoyé !",
+      error: "Oups ! Quelque chose s'est mal passé. Veuillez réessayer.",
+    },
+  };
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,10 +41,10 @@ export const Contact = () => {
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then((result) => {
-        alert("Message Sent!");
+        alert(t[lang].sent);
         setFormData({ name: "", email: "", message: "" });
       })
-      .catch(() => alert("Oops! Something went wrong. Please try again."));
+      .catch(() => alert(t[lang].error));
   };
 
   return (
@@ -33,10 +54,7 @@ export const Contact = () => {
     >
       <RevealOnScroll>
         <div className="px-4 w-full min-w-[300px] md:w-[500px] sm:w-2/3 p-6">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-            {" "}
-            Get In Touch
-          </h2>
+          <h2 className="section-heading text-center mb-8">{t[lang].heading}</h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="relative">
               <input
@@ -46,7 +64,7 @@ export const Contact = () => {
                 required
                 value={formData.name}
                 className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                placeholder="Name..."
+                placeholder={t[lang].name}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
@@ -61,7 +79,7 @@ export const Contact = () => {
                 required
                 value={formData.email}
                 className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                placeholder="example@gmail.com"
+                placeholder={t[lang].email}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
@@ -76,7 +94,7 @@ export const Contact = () => {
                 rows={5}
                 value={formData.message}
                 className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                placeholder="Your Message..."
+                placeholder={t[lang].message}
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
@@ -87,7 +105,7 @@ export const Contact = () => {
               type="submit"
               className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
             >
-              Send Message
+              {t[lang].submit}
             </button>
           </form>
         </div>

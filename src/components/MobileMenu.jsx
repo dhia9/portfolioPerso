@@ -1,9 +1,14 @@
 import { useEffect } from "react";
 
-export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
+export const MobileMenu = ({ menuOpen, setMenuOpen, lang }) => {
+  const t = {
+    en: { home: "Home", about: "About", projects: "Projects", skills: "Skills", contact: "Contact" },
+    fr: { home: "Accueil", about: "À propos", projects: "Projets", skills: "Compétences", contact: "Contact" },
+  };
+
   return (
     <div
-      className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex flex-col items-center justify-center
+      className={`fixed top-0 left-0 w-full bg-[rgba(6,11,28,0.92)] z-40 flex flex-col items-center justify-center
                      transition-all duration-300 ease-in-out
 
                      ${
@@ -32,7 +37,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
                     }        
             `}
       >
-        Home
+        {t[lang].home}
       </a>
       <a
         href="#about"
@@ -43,7 +48,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
             }        
     `}
       >
-        About
+        {t[lang].about}
       </a>
       <a
         href="#projects"
@@ -54,10 +59,9 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
             }        
     `}
       >
-        Projects
+        {t[lang].projects}
       </a>
-      <a
-        href="#contact"
+      <a        href="#skills"
         onClick={() => setMenuOpen(false)}
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
             ${
@@ -65,7 +69,17 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
             }        
     `}
       >
-        Contact
+        {t[lang].skills}
+      </a>
+      <a        href="#contact"
+        onClick={() => setMenuOpen(false)}
+        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+            ${
+              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+            }        
+    `}
+      >
+        {t[lang].contact}
       </a>
     </div>
   );

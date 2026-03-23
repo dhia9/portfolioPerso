@@ -1,39 +1,54 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 
-export const About = () => {
-  const frontendSkills = [
-    "React",
-    "Bootstrap",
-    "TailwindCSS",
-    "HTML",
-    "CSS",
-    "ejs (Embedded js)",
-    "Material UI"
-  ];
+export const About = ({ lang }) => {
+  const t = {
+    en: {
+      title: "About Me",
+      intro: "Passionate developer with expertise in building scalable web applications and creating meaningful innovative solutions.",
+      frontend: "Frontend",
+      backend: "Backend",
+      education: "Education",
+      workExp: "Work Experience",
+      educationList: [
+        "Integrated Preparatory Cycle (second year) - INSA Lyon",
+        "Relevant Coursework: Data Structures, Web Development, GUI OOP, Statistics, Machine Learning - first year obtained with high honors",
+        "French General Baccalaureate – Mathematics & Physics Specialization - Self-taught candidate Graduated with High Honors",
+        "Baccalaureate – Mathematics Specialization (Lycée Pilote) - Result: Graduated with Highest Honors"
+      ],
+      workText: "Warehouse Logistics & Management Intern | SMG: Introductory Corporate Internship with hands-on experience in supply chain operations and inventory management.",
+    },
+    fr: {
+      title: "À propos",
+      intro: "Développeur passionné spécialisé dans la création d'applications web évolutives et de solutions innovantes à forte valeur ajoutée.",
+      frontend: "Frontend",
+      backend: "Backend",
+      education: "Formation",
+      workExp: "Expérience Professionnelle",
+      educationList: [
+        "Cycle préparatoire intégré (deuxième année) - INSA Lyon",
+        "Cours pertinents : Structures de données, développement Web, GUI OOP, Statistiques, apprentissage automatique - première année obtenue avec mention très bien",
+        "Baccalauréat général français – Spécialité Mathématiques & Physique - candidat libre diplômé mention très bien",
+        "Baccalauréat – spécialité Mathématiques (Lycée Pilote) - Résultat : Diplômé mention très très bien"
+      ],
+      workText: "Stagiaire Logistique & Gestion d'entrepôt | SMG : stage en entreprise avec expérience pratique des opérations de la chaîne d'approvisionnement et de la gestion des stocks.",
+    },
+  };
 
-  const backendSkills = ["Node.js", "Python", "Express", "MongoDB", "PostgreSQL","API REST","SQL","MVC","Typescript","javascript(ES6)"];
+  const frontendSkills = ["React", "Bootstrap", "TailwindCSS", "HTML", "CSS", "ejs (Embedded js)", "Material UI"];
+  const backendSkills = ["Node.js", "Python", "Express", "MongoDB", "PostgreSQL", "API REST", "SQL", "MVC", "Typescript", "JavaScript (ES6)"];
 
   return (
-    <section
-      id="about"
-      className="min-h-screen flex items-center justify-center py-20"
-    >
+    <section id="about" className="section-root flex items-center justify-center">
       <RevealOnScroll>
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-            {" "}
-            About Me
-          </h2>
+        <div className="section-inner">
+          <h2 className="section-heading text-center mb-8">{t[lang].title}</h2>
 
-          <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
-            <p className="text-gray-300 mb-6">
-              Passionate developer with expertise in building scalable web
-              applications and creating meaningful innovative solutions.
-            </p>
+          <div className="card glass-panel p-8 mb-8">
+            <p className="text-muted mb-6">{t[lang].intro}</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4"> Frontend</h3>
+              <div className="card glass-panel p-6">
+                <h3 className="text-xl font-bold mb-4">{t[lang].frontend}</h3>
                 <div className="flex flex-wrap gap-2">
                   {frontendSkills.map((tech, key) => (
                     <span
@@ -48,8 +63,8 @@ export const About = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4"> Backend</h3>
+              <div className="card glass-panel p-6">
+                <h3 className="text-xl font-bold mb-4">{t[lang].backend}</h3>
                 <div className="flex flex-wrap gap-2">
                   {backendSkills.map((tech, key) => (
                     <span
@@ -68,35 +83,22 @@ export const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
+              <h3 className="text-xl font-bold mb-4">🏫 {t[lang].education}</h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
-                <li>
-                  <strong> Integrated Preparatory Cycle (second year)</strong> - INSA LYON
-                  
-                </li>
-                <li>
-                  Relevant Coursework: Data Structures, Web Development , GUI
-                  OOP ,Statistics , Machine learning
-                  <br />
-                  - first year obtained with high honors
-                </li>
-                <li>French General Baccalaureate – Mathematics & Physics Specialization
-                  <br />- Self-taught candidate Graduated with High Honors<br /></li>
-                <li> Baccalaureate – Mathematics Specialization
-                  Lycée Pilote 
-                  <br />- Result: Graduated with Highest Honors<br />- Context: Attended a selective "Lycée Pilote", with admission granted only through a highly competitive national entrance exam.</li>
+                {t[lang].educationList.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
             <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4"> 💼 Work Experience </h3>
+              <h3 className="text-xl font-bold mb-4">💼 {t[lang].workExp}</h3>
               <div className="space-y-4 text-gray-300">
                 <div>
                   <h4 className="font-semibold">
-                    {" "}
-                    Warehouse Logistics & Management Intern | SMG{" "}
+                    Warehouse Logistics & Management Intern | SMG
                   </h4>
                   <p>
-                    Introductory Corporate Internship: Gained hands-on experience in supply chain operations and large-scale inventory management.<br/>
+                    {t[lang].workText}<br/>
 
                     Observed and assisted in daily logistics workflows, warehouse organization, and stock control systems.
                   </p>
